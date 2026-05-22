@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Zap, Shield, Layers, Globe, Cloud } from "lucide-react";
 import { CloudBackdrop } from "@/components/CloudBackdrop";
+import { PasteLinkBar } from "@/components/PasteLinkBar";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -79,6 +80,9 @@ function Hero() {
             Watch the 60-second tour
           </a>
         </div>
+
+        <PasteLinkBar />
+
 
         {/* Floating product preview */}
         <div className="relative mx-auto mt-16 max-w-5xl">

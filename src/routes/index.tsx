@@ -81,6 +81,9 @@ function Hero() {
           </a>
         </div>
 
+        <PasteLinkBar />
+
+
         {/* Floating product preview */}
         <div className="relative mx-auto mt-16 max-w-5xl">
           <div className="glass-strong overflow-hidden rounded-3xl p-2 shadow-glow">

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Zap, Shield, Layers, Globe, Cloud } from "lucide-react";
 import { CloudBackdrop } from "@/components/CloudBackdrop";
+import { PasteLinkBar } from "@/components/PasteLinkBar";
 
 export const Route = createFileRoute("/")({
   component: Index,

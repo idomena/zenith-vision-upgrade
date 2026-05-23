@@ -110,6 +110,16 @@
   .animate-float { animation: float 14s ease-in-out infinite; }
   .animate-float-slow { animation: float 22s ease-in-out infinite; }
   .animate-drift { animation: drift 60s linear infinite; }
+  .animate-scroll-left { animation: scroll-left 35s linear infinite; }
+  .gradient-text {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-bg {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  }
 }
 
 @keyframes float {
@@ -119,4 +129,8 @@
 @keyframes drift {
   from { transform: translateX(-5%); }
   to { transform: translateX(5%); }
+}
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }

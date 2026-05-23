@@ -34,18 +34,6 @@ const categories = [
   { label: 'Research', icon: Brain, color: 'text-cyan-500', bg: 'bg-cyan-50 hover:bg-cyan-100 border-cyan-100' },
 ];
 
-function Cloud({ className, style }: { className?: string; style?: React.CSSProperties }) {
-  return (
-    <div className={`absolute pointer-events-none select-none ${className}`} style={style}>
-      <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full opacity-60">
-        <ellipse cx="100" cy="80" rx="80" ry="40" fill="white" />
-        <ellipse cx="70" cy="65" rx="45" ry="38" fill="white" />
-        <ellipse cx="130" cy="70" rx="40" ry="32" fill="white" />
-        <ellipse cx="100" cy="58" rx="35" ry="30" fill="white" />
-      </svg>
-    </div>
-  );
-}
 
 function MockToolCard({ tool, delay }: { tool: typeof MOCK_TOOLS[0]; delay: number }) {
   const pricingColor =
@@ -96,17 +84,6 @@ export default function Landing() {
 
       {/* Hero */}
       <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-16 overflow-hidden">
-
-        <Cloud className="w-64 h-40 top-20 left-[-40px] animate-float-slow" style={{ animationDelay: '0s' }} />
-        <Cloud className="w-48 h-32 top-32 right-[-20px] animate-float" style={{ animationDelay: '2s', animationDuration: '8s' }} />
-        <Cloud className="w-56 h-36 top-[60%] left-[5%] animate-float-slow" style={{ animationDelay: '1s' }} />
-        <Cloud className="w-72 h-44 top-[55%] right-[2%] animate-float" style={{ animationDelay: '3s', animationDuration: '7s' }} />
-        <Cloud className="w-40 h-28 top-[80%] left-[40%] animate-float-slow" style={{ animationDelay: '1.5s' }} />
-
-        <div className="absolute top-24 right-32 w-2 h-2 rounded-full bg-indigo-300/50 animate-float" />
-        <div className="absolute top-48 left-32 w-3 h-3 rounded-full bg-violet-300/40 animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-48 right-48 w-2 h-2 rounded-full bg-blue-300/50 animate-float" style={{ animationDelay: '2s' }} />
-
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -287,8 +264,6 @@ export default function Landing() {
 
       {/* Features */}
       <section className="py-24 px-4 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
-        <Cloud className="w-48 h-32 top-8 right-[-10px] opacity-40" />
-        <Cloud className="w-36 h-24 bottom-8 left-[-10px] opacity-30" />
 
         <div className="max-w-5xl mx-auto relative">
           <motion.div
@@ -331,10 +306,6 @@ export default function Landing() {
       {/* CTA */}
       <section className="py-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-violet-50/50 to-blue-50" />
-        <Cloud className="w-64 h-40 top-4 left-[-20px] opacity-70" />
-        <Cloud className="w-56 h-36 bottom-4 right-[-20px] opacity-60" />
-        <Cloud className="w-40 h-28 top-1/2 right-1/4 opacity-50" />
-
         <div className="max-w-2xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

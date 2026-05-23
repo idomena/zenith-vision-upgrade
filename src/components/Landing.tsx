@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'sonner';
+import { CloudBackdrop } from '@/components/CloudBackdrop';
 import {
   Sparkles, Zap, Search, Star, ArrowRight, Brain, Wand2,
   Code2, Palette, Mic, Video, Globe, Loader2, CheckCircle,
@@ -90,13 +91,11 @@ export default function Landing() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-indigo-50/30 overflow-hidden">
+    <div className="min-h-screen overflow-hidden">
+      <CloudBackdrop />
 
       {/* Hero */}
       <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-16 overflow-hidden">
-
-        <div className="absolute inset-0 bg-gradient-to-b from-sky-100/60 via-blue-50/40 to-white pointer-events-none" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(ellipse,theme(colors.indigo.100/60%),theme(colors.violet.50/20%),transparent)] rounded-full blur-3xl pointer-events-none" />
 
         <Cloud className="w-64 h-40 top-20 left-[-40px] animate-float-slow" style={{ animationDelay: '0s' }} />
         <Cloud className="w-48 h-32 top-32 right-[-20px] animate-float" style={{ animationDelay: '2s', animationDuration: '8s' }} />

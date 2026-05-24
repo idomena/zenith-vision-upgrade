@@ -78,6 +78,9 @@
 
 @layer base {
   * { border-color: var(--color-border); }
+  html {
+    scroll-behavior: smooth;
+  }
   html, body { font-family: var(--font-sans); }
   body {
     background: var(--background);
@@ -120,6 +123,7 @@
   .gradient-bg {
     background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   }
+  .duration-400 { transition-duration: 400ms; }
 }
 
 @keyframes float {
